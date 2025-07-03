@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 🧩 Exercise 1: Manual Bean -->
+    <bean id="bookingService" class="org.basic_spring.BookingService" />
+
+    <!-- 🧩 Exercise 2: Setter DI -->
+    <bean id="bookingService2" class="org.spring_ioc_container.BookingService2" />
+
+    <bean id="bookingApp2" class="org.spring_ioc_container.BookingApp2">
+        <property name="bookingService" ref="bookingService2"/>
+    </bean>
+
+    <!-- 🆕 Exercise 3: Multi-Bean DI -->
+    <bean id="notificationService" class="org.dependency_injection.NotificationService" />
+
+    <bean id="bookingService3" class="org.dependency_injection.BookingService3">
+        <property name="notificationService" ref="notificationService" />
+    </bean>
+
+    <bean id="app3" class="org.dependency_injection.App3">
+        <property name="bookingService" ref="bookingService3" />
+    </bean>
+
+    <!-- 🆕 Exercise 4: Constructor + Setter Injection -->
+    <bean id="paymentService" class="org.constructor_setter.PaymentService" />
+
+    <bean id="bookingService4" class="org.constructor_setter.BookingService4">
+        <constructor-arg ref="paymentService"/>
+    </bean>
+
+    <bean id="app4" class="org.constructor_setter.App4">
+        <property name="bookingService" ref="bookingService4" />
+    </bean>
+
+
+</beans>
