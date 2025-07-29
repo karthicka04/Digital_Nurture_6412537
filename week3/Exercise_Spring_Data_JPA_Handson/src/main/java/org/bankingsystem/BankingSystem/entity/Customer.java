@@ -13,6 +13,16 @@ public class Customer {
     private String email;
     private double balance;
 
+    // Default constructor
+    public Customer() {}
+
+    // Constructor without ID (for new entities)
+    public Customer(String name, String email, double balance) {
+        this.name = name;
+        this.email = email;
+        this.balance = balance;
+    }
+
     // Getters and setters
     public Long getId() {
         return id;
