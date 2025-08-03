@@ -1,0 +1,14 @@
+.office-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fefefe;
+}
+
+.office-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
