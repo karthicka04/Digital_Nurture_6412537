@@ -1,8 +1,8 @@
 import Trainer from './trainer';
 const trainersMock = [
-    new Trainer('Ashwath07',
-        'Ashwath',
-        'ashwath@example.com',
+    new Trainer('Karthi77',
+        'Karthi',
+        'karthi77@example.com',
         '123-456-7890',
         'JavaScript',
         ['React', 'Node.js']),

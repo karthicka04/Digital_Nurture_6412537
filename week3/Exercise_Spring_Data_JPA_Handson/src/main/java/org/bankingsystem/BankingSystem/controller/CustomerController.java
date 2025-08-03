@@ -18,6 +18,8 @@ public class CustomerController {
 
     @PostMapping
     public Customer createCustomer(@RequestBody Customer customer) {
+        // Ensure ID is null for new entities to avoid merge conflicts
+        customer.setId(null);
         return service.addCustomer(customer);
     }
 
